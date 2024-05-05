@@ -1,0 +1,32 @@
+input_dirpath: '/input/dir'
+output_dirpath: '/output/dir'
+experiment_name: 'experiment30'
+n_trials: 30
+n_prediction_steps: 5
+environments:
+  resources:
+    CPU:
+      unit: '%'
+      requested_value: 100
+      reward_reallocation: -20
+      reward_requested_allocation: 0
+      reward_optimal_allocation: 100
+      reward_underallocation: -500
+    RAM:
+      unit: GB
+      requested_value: 17
+      reward_reallocation: -100
+      reward_requested_allocation: 0
+      reward_optimal_allocation: 100
+      reward_underallocation: -500
+  coef_margins:
+    - CPU: 1
+      RAM: 1
+    - CPU: 1.5
+      RAM: 1.5
+    - CPU: 2
+      RAM: 2
+    - CPU: 3
+      RAM: 3
+    - CPU: 5
+      RAM: 5
